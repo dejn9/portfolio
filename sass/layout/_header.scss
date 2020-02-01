@@ -1,0 +1,52 @@
+.header {
+    background-color: #111111;
+    padding: 15px 0;
+    position: relative;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        @include color-white;
+        font-weight: 600;
+        @include transition-3ms;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+
+            .header__menu-right {
+                @include color-white;
+            }
+
+            .header__menu-left div {
+                background-color: white;
+            }
+        }
+
+        &-left {
+            div {
+                width: 20px;
+                height: 2px;
+                background-color: rgba(255, 255, 255, 0.5);
+                @include transition-3ms;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &-right {
+            color: rgba(255, 255, 255, 0.5);
+            margin-left: 15px;
+            @include transition-3ms;
+        }
+    }
+}

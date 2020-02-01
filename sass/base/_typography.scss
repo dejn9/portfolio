@@ -1,0 +1,191 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.main {
+
+    &__heading {
+        font-size: 60px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+        font-size: 25px;
+    }
+}
+
+.aboutMe {
+
+    &__heading {
+        @include heading__secondary;
+        @include color-white;
+    }
+
+    &__paragraph,
+    &__paragraph-2 {
+        font-size: 20px;
+        @include color-white;
+    }
+
+    &__paragraph {
+        margin-bottom: 20px;
+    }
+}
+
+.skills {
+    &__heading {
+        @include heading__secondary;
+    }
+
+    &__box {
+        h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #555555;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444444;
+            margin-bottom: 35px;
+            width: 100%;
+        }
+    }
+}
+
+.contact {
+    &__heading {
+        @include heading__secondary;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+.footer {
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .main {
+        &__heading {
+            font-size: 55px;
+        }
+
+        &__paragraph {
+            font-size: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .main {
+        &__heading {
+            font-size: 50px;
+        }
+
+        &__wrapper {
+            width: 500px;
+        }
+
+        &__paragraph {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .main {
+        &__heading {
+            font-size: 45px;
+        }
+
+        &__paragraph {
+            font-size: 20px;
+        }
+
+        &__wrapper {
+            width: 350px;
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .skills {
+        &__box {
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .aboutMe {
+
+        &__paragraph,
+        &__paragraph-2 {
+            font-size: 18px;
+        }
+    }
+
+    .contact {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .footer {
+        padding: 30px 0;
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .main {
+        &__wrapper {
+            width: 250px;
+        }
+
+        &__heading {
+            font-size: 40px;
+        }
+
+        &__paragraph {
+            font-size: 18px;
+        }
+    }
+
+    .footer {
+        &__copyright {
+            font-size: 12px;
+        }
+    }
+}

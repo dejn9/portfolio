@@ -1,0 +1,136 @@
+.main {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+
+    &::after {
+        @include bg-after;
+        z-index: 2;
+        opacity: 0.6;
+        background: linear-gradient(135deg, #ce1b28 0%, #111111 74%);
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 80vh;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include color-white;
+        @include text-center;
+    }
+}
+
+.aboutMe {
+    background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/cta01.jpg);
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    height: 500px;
+    @include text-center;
+}
+
+.skills {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 100px;
+
+    &::after {
+        @include bg-after;
+        background-image: url('../images/bg.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: 0.05;
+    }
+
+    &__box {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 25px;
+
+        &-i {
+            i {
+                &:not(:first-of-type) {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        i {
+            color: red;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+.contact {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 100px;
+    @include text-center;
+
+    &::after {
+        @include bg-after;
+        background-image: url('../images/bg.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: 0.05;
+
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 5000;
+    }
+
+    &__box {
+        width: 40%;
+        background-color: white;
+        padding: 30px 20px;
+
+        i {
+            color: red;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .contact {
+        &__flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__box {
+            width: 70%;
+
+            &:first-of-type {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
