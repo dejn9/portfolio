@@ -138,22 +138,6 @@
     }
 
     .aboutMe {
-        // background-image: none;
-        position: relative;
-        background-size: unset;
-    }
-
-    .aboutMe::after {
-        content: "";
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: -5;
-        background: url('../../images/cta01.jpg') no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        background-image: linear-gradient(rgba(51, 51, 51, 0.9), rgba(221, 24, 24, 0.9));
     }
 }
