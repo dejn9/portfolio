@@ -140,6 +140,7 @@
     .aboutMe {
         // background-image: none;
         position: relative;
+        background-size: unset;
     }
 
     .aboutMe::after {

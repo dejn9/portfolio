@@ -136,7 +136,8 @@ a:visited {
     .contact__box:first-of-type {
       margin-bottom: 30px; }
   .aboutMe {
-    position: relative; }
+    position: relative;
+    background-size: unset; }
   .aboutMe::after {
     content: "";
     display: block;
