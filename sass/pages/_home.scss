@@ -35,11 +35,12 @@
     background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/cta01.jpg);
     width: 100%;
     background-position: 50% 50%;
-    // background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
     object-fit: cover;
     height: 500px;
     @include text-center;
+
 }
 
 .skills {
@@ -132,5 +133,9 @@
                 margin-bottom: 30px;
             }
         }
+    }
+
+    .aboutMe {
+        background-attachment: initial;
     }
 }
