@@ -111,7 +111,8 @@ a:visited {
     background-image: url("../images/bg.jpg");
     background-attachment: fixed;
     background-size: cover;
-    opacity: 0.05; }
+    opacity: 0.05;
+    z-index: 100000; }
   .contact__flex {
     display: flex;
     justify-content: space-between;
@@ -133,7 +134,21 @@ a:visited {
   .contact__box {
     width: 70%; }
     .contact__box:first-of-type {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+  .aboutMe {
+    position: relative; }
+  .aboutMe::after {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -5;
+    background: url("../../images/cta01.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
 
 html,
 body {
@@ -328,6 +343,8 @@ h6 {
   grid-template-columns: repeat(3, 1fr); }
 
 @media only screen and (max-width: 992px) {
+  .skills__grid {
+    grid-template-columns: repeat(1, 1fr); }
   @-moz-document url-prefix() {
     .skills__grid {
       grid-template-columns: repeat(1, 1fr); } } }
