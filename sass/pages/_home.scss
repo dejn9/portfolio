@@ -136,6 +136,7 @@
     }
 
     .aboutMe {
-        background-attachment: initial;
+        background-size: unset;
+        background-attachment: scroll;
     }
 }
