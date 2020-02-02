@@ -55,8 +55,7 @@
         I've done.
       </p>
     </div>
-    <video playsinline autoplay loop muted class='main__video' autoplay loop muted playsinline
-      src="images/banner.mp4"></video>
+    <video id='video_background' src="images/banner.mp4"></video>
   </section>
 
   <!-- MY SKILLS SECTION -->
@@ -176,7 +175,9 @@
 
   </footer>
 
-
+  <script>
+    document.querySelector('#video_background').play();
+  </script>
 </body>
 
 </html>
