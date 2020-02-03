@@ -21,18 +21,17 @@
     }
 
     &__wrapper {
-        position: absolute;
+        @include positionCenter;
         z-index: 3;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include color-white;
         @include text-center;
     }
 }
 
 .aboutMe {
-    background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/cta01.jpg);
+    background-image: linear-gradient(rgba(206, 27, 40, 0.25),
+            rgba(206, 27, 40, 0.25)),
+        url(../../images/cta01.jpg);
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
@@ -40,7 +39,6 @@
     object-fit: cover;
     height: 500px;
     @include text-center;
-
 }
 
 .skills {
@@ -78,7 +76,6 @@
             font-size: 50px;
             margin-bottom: 20px;
         }
-
     }
 }
 
@@ -90,7 +87,6 @@
     padding-bottom: 100px;
     @include text-center;
 
-
     &::after {
         @include bg-after;
         background-image: url('../images/bg.jpg');
@@ -98,7 +94,6 @@
         background-size: cover;
         opacity: 0.05;
         z-index: 100000;
-
     }
 
     &__flex {
@@ -121,9 +116,12 @@
     }
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
     .aboutMe {
-        background-image: linear-gradient(to right, rgba(142, 14, 0, .8), rgba(31, 28, 24, .8));
+        background-image: linear-gradient(to right,
+                rgba(142, 14, 0, 0.8),
+                rgba(31, 28, 24, 0.8)),
+            url('../../images/bg.jpg');
     }
 
     .skills,
@@ -132,7 +130,7 @@
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .contact {
         &__flex {
             flex-direction: column;
@@ -147,8 +145,14 @@
             }
         }
     }
+}
 
-    .aboutMe {
-        background-image: linear-gradient(to right, #8E0E00, #1F1C18);
+@media only screen and (max-width:576px) {
+    .main {
+        height: 60vh;
+
+        &__video {
+            height: 60vh;
+        }
     }
 }

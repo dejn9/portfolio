@@ -47,10 +47,10 @@ a:visited {
     z-index: -1; }
   .main__wrapper {
     position: absolute;
-    z-index: 3;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 3;
     color: white;
     text-align: center; }
 
@@ -129,7 +129,7 @@ a:visited {
 
 @media only screen and (max-width: 1024px) {
   .aboutMe {
-    background-image: linear-gradient(to right, rgba(142, 14, 0, 0.8), rgba(31, 28, 24, 0.8)); }
+    background-image: linear-gradient(to right, rgba(142, 14, 0, 0.8), rgba(31, 28, 24, 0.8)), url("../../images/bg.jpg"); }
   .skills,
   .contact {
     background-image: linear-gradient(to right, #bdc3c7, #2c3e50); } }
@@ -141,9 +141,13 @@ a:visited {
   .contact__box {
     width: 70%; }
     .contact__box:first-of-type {
-      margin-bottom: 30px; }
-  .aboutMe {
-    background-image: linear-gradient(to right, #8E0E00, #1F1C18); } }
+      margin-bottom: 30px; } }
+
+@media only screen and (max-width: 576px) {
+  .main {
+    height: 60vh; }
+    .main__video {
+      height: 60vh; } }
 
 html,
 body {
@@ -172,6 +176,7 @@ h6 {
   margin-bottom: 25px;
   color: #555555;
   text-align: center;
+  color: white;
   color: white; }
   @media only screen and (max-width: 992px) {
     .aboutMe__heading {
@@ -197,7 +202,8 @@ h6 {
   font-size: 40px;
   margin-bottom: 25px;
   color: #555555;
-  text-align: center; }
+  text-align: center;
+  color: white; }
   @media only screen and (max-width: 992px) {
     .skills__heading {
       font-size: 35px; } }
@@ -226,7 +232,8 @@ h6 {
   font-size: 40px;
   margin-bottom: 25px;
   color: #555555;
-  text-align: center; }
+  text-align: center;
+  color: white; }
   @media only screen and (max-width: 992px) {
     .contact__heading {
       font-size: 35px; } }
@@ -408,3 +415,10 @@ h6 {
     color: white;
     text-align: center;
     padding-top: 25px; }
+
+@media only screen and (max-width: 576px) {
+  .footer__flex {
+    flex-direction: column; }
+  .footer__box {
+    margin: 0 auto;
+    text-align: center; } }
