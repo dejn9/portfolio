@@ -120,8 +120,9 @@ a:visited {
     z-index: 5000; }
   .contact__box {
     width: 40%;
-    background-color: white;
-    padding: 30px 20px; }
+    background-color: green;
+    padding: 30px 20px;
+    z-index: 999999999999999995; }
     .contact__box i {
       color: red;
       font-size: 50px;
